@@ -14,6 +14,14 @@
 */
 
 isEven(6);
+function isEven(nb){
+    if (nb % 2 == 0) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
+console.log(isEven(6));
 
 /*      Test 2
     Appel à la fonction "isEven",
