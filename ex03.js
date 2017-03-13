@@ -18,6 +18,12 @@
 */
 
 addition(6, 9);
+function addition(nb1, nb2){
+    var result = nb1 + nb2;
+    return result;
+}
+console.log(addition(6, 9))
+console.log(addition(98766,345678))
 
 /*      Test 2
     Appel à la fonction "addition",
