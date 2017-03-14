@@ -1,3 +1,5 @@
+"use strict";
+
 /*
     Ecrire une fonction "shoppingList",
     qui prend un paramètre un tableau de paniers;
@@ -55,11 +57,11 @@ function shoppingList(panier) {
     let banane = 0;
     let pamplemousse = 0;
 
-    for (t = 0; t < panier.length; t++) {
+    for (let t = 0; t < panier.length; t++) {
 
-        panierception = panier[t];
+        let panierception = panier[t];
 
-        for (i = 0; i < panierception.length; i++) {
+        for (let i = 0; i < panierception.length; i++) {
             if (panierception[i] == "orange") {
                 orange++;
             } else if (panierception[i] == "kiwi") {
