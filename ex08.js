@@ -31,3 +31,23 @@ isAllEven([4, 4, 6, 8, 10, 12]);
 
 //  écrire votre code sous ce commentaire
 
+function isAllEven(nb) {
+    var currentNumber = 0
+    var result = [];
+    for (let i = 0; i < nb.length; i++) {
+        currentNumber = nb[i] + currentNumber;
+    } result.push(isEven(currentNumber));
+    return result;
+
+}
+
+console.log(isAllEven([4,4,6,8,10,12]));
+
+
+function isEven(nb) {
+    if (nb % 2 == 0) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
