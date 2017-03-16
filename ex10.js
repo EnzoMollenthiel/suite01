@@ -49,46 +49,26 @@ shoppingList([
 //  écrire votre code sous ce commentaire
 function shoppingList(panier) {
 
-    let fruit = [];
-    let orange = 0;
-    let kiwi = 0;
-    let ananas = 0;
-    let prune = 0;
-    let banane = 0;
-    let pamplemousse = 0;
+    let fruit = new Object();
 
     for (let t = 0; t < panier.length; t++) {
 
         let panierception = panier[t];
 
-        for (let i = 0; i < panierception.length; i++) {
-            if (panierception[i] == "orange") {
-                orange++;
-            } else if (panierception[i] == "kiwi") {
-                kiwi++;
-            } else if (panierception[i] == "ananas") {
-                ananas++;
-            } else if (panierception[i] == "prune") {
-                prune++;
-            } else if (panierception[i] == "banane") {
-                banane++;
-            } else if (panierception[i] == "pamplemousse") {
-                pamplemousse++;
-            }
+        for (let i of panierception) {
 
+            if (fruit[i]) {
+                fruit[i] += 1;
+            }
+            else {
+                fruit[i] = 1
+            }
         }
     }
-    return {
-        orange: orange,
-        kiwi: kiwi,
-        ananas: ananas,
-        prune: prune,
-        banane: banane,
-        pamplemousse: pamplemousse
-    }
+    return fruit;
 
-
-} console.log(shoppingList([
+}
+console.log(shoppingList([
     ["orange", "orange", "kiwi", "ananas"],
     ["kiwi", "ananas", "banane", "prune"],
     ["orange", "orange", "orange", "orange"],
